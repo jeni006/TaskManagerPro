@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskPro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <div class="sidebar">
+            <h1 class="logo">Task<span>Pro</span></h1>
+            <p>Smart tasks • Clean workflow</p>
+
+            <form id="task-form">
+                <label>Title *</label>
+                <input type="text" id="task-title" placeholder="e.g. Finish project README" required>
+
+                <label>Description</label>
+                <textarea id="task-desc" placeholder="Notes, subtasks, links..."></textarea>
+
+                <label>Due Date</label>
+                <input type="date" id="task-date">
+
+                <label>Priority</label>
+                <select id="task-priority">
+                    <option>Low</option>
+                    <option selected>Medium</option>
+                    <option>High</option>
+                </select>
+
+                <div class="btn-row">
+                    <button type="submit">Add Task</button>
+                    <button type="reset" class="secondary">Reset</button>
+                </div>
+            </form>
+
+            <input type="text" id="search" placeholder="Search tasks...">
+            <select id="priority-filter">
+                <option value="all">All priorities</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <button id="export-csv" class="full">Export CSV</button>
+            <button id="clear-completed" class="secondary full">Clear Completed</button>
+        </div>
+
+        <div class="tasks-container">
+            <h2>My Tasks</h2>
+            <div class="progress">
+                <span id="progress-text">0 / 0 done</span>
+                <div class="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="task-sections">
+                <div class="todo-section">
+                    <h3>To Do</h3>
+                    <div id="todo-list"></div>
+                </div>
+
+                <div class="completed-section">
+                    <h3>Completed</h3>
+                    <div id="completed-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
