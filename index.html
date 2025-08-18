@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,3 +75,63 @@
 <script src="script.js"></script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskPro - Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h1>TaskPro</h1>
+      <form id="task-form">
+        <input type="text" id="task-title" placeholder="Task title" required>
+        <textarea id="task-desc" placeholder="Description (optional)"></textarea>
+        <input type="date" id="task-date">
+        <select id="task-priority">
+          <option value="High">High Priority</option>
+          <option value="Medium" selected>Medium Priority</option>
+          <option value="Low">Low Priority</option>git 
+        </select>
+        <button type="submit" class="full">Add Task</button>
+      </form>
+
+      <input type="text" id="search" placeholder="Search tasks...">
+      <select id="priority-filter">
+        <option value="all">All Priorities</option>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+
+      <button id="export-csv" class="full">Export CSV</button>
+      <button id="clear-completed" class="full danger">Clear Completed</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+      <h2>My Tasks</h2>
+      <div id="progress">
+        <span id="progress-text">0 / 0 done</span>
+        <div class="progress-bar">
+          <div id="progress-fill"></div>
+        </div>
+      </div>
+
+      <h3>To Do</h3>
+      <div id="todo-list" class="task-list"></div>
+
+      <h3>Completed</h3>
+      <div id="completed-list" class="task-list"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+>>>>>>> 13d6a9b (Updated taskpro)
